@@ -113,51 +113,55 @@ export default function HomePage() {
       </section>
 
       {/* Pratinjau linimasa (R2.3) */}
-      <section
-        aria-labelledby="timeline-preview"
-        className="section-rule mt-section-mobile md:mt-section"
-      >
-        <div className="flex items-baseline justify-between gap-4">
-          <SectionHeading id="timeline-preview">Linimasa</SectionHeading>
-          <Link
-            href="/timeline"
-            className="text-sm text-ink underline decoration-rule underline-offset-4 hover:text-accent"
-          >
-            Linimasa lengkap
-          </Link>
-        </div>
-        <div className="mt-6 flex flex-col gap-6">
-          {timelinePreview.map((entry) => (
-            <TimelineEntry
-              key={entry.id}
-              entry={entry}
-              sources={sources}
-              variant="compact"
-            />
-          ))}
-        </div>
-      </section>
+      {timelinePreview.length > 0 ? (
+        <section
+          aria-labelledby="timeline-preview"
+          className="section-rule mt-section-mobile md:mt-section"
+        >
+          <div className="flex items-baseline justify-between gap-4">
+            <SectionHeading id="timeline-preview">Linimasa</SectionHeading>
+            <Link
+              href="/timeline"
+              className="text-sm text-ink underline decoration-rule underline-offset-4 hover:text-accent"
+            >
+              Linimasa lengkap
+            </Link>
+          </div>
+          <div className="mt-6 flex flex-col gap-6">
+            {timelinePreview.map((entry) => (
+              <TimelineEntry
+                key={entry.id}
+                entry={entry}
+                sources={sources}
+                variant="compact"
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {/* Pratinjau kebijakan (R2.4) */}
-      <section
-        aria-labelledby="policy-preview"
-        className="section-rule mt-section-mobile md:mt-section"
-      >
-        <div className="flex items-baseline justify-between gap-4">
-          <SectionHeading id="policy-preview">Kebijakan</SectionHeading>
-          <Link
-            href="/policies"
-            className="text-sm text-ink underline decoration-rule underline-offset-4 hover:text-accent"
-          >
-            Indeks kebijakan
-          </Link>
-        </div>
-        <div className="mt-6 flex flex-col gap-6">
-          {policyPreview.map((policy) => (
-            <PolicyCard key={policy.slug} policy={policy} variant="compact" />
-          ))}
-        </div>
-      </section>
+      {policyPreview.length > 0 ? (
+        <section
+          aria-labelledby="policy-preview"
+          className="section-rule mt-section-mobile md:mt-section"
+        >
+          <div className="flex items-baseline justify-between gap-4">
+            <SectionHeading id="policy-preview">Kebijakan</SectionHeading>
+            <Link
+              href="/policies"
+              className="text-sm text-ink underline decoration-rule underline-offset-4 hover:text-accent"
+            >
+              Indeks kebijakan
+            </Link>
+          </div>
+          <div className="mt-6 flex flex-col gap-6">
+            {policyPreview.map((policy) => (
+              <PolicyCard key={policy.slug} policy={policy} variant="compact" />
+            ))}
+          </div>
+        </section>
+      ) : null}
     </Container>
   );
 }

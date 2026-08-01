@@ -14,7 +14,7 @@ import { PolicyCard } from "@/components/content/policy-card";
 export const metadata = buildMetadata({
   title: "Kebijakan",
   description:
-    "Indeks kebijakan publik yang dirujuk ke pemerintahan Joko Widodo, dengan ringkasan, latar belakang, dan perdebatan.",
+    "Indeks kebijakan publik dengan ringkasan, latar belakang, dan perdebatan.",
   path: "/policies",
 });
 
@@ -34,15 +34,21 @@ export default function PoliciesIndexPage() {
           Indeks kebijakan
         </h1>
         <p className="prose-body mt-6 max-w-prose text-base text-ink-muted">
-          Daftar kebijakan publik yang terkait pemerintahan Joko Widodo,
-          dengan ringkasan singkat. Halaman detail memuat latar
-          belakang, isi, dan perdebatan publik jika terdokumentasi.
+          Daftar kebijakan publik dengan ringkasan singkat. Halaman
+          detail memuat latar belakang, isi, dan perdebatan publik
+          jika terdokumentasi.
         </p>
 
         <div className="mt-section-mobile flex flex-col gap-8 md:mt-10">
-          {policies.map((policy) => (
-            <PolicyCard key={policy.slug} policy={policy} variant="compact" />
-          ))}
+          {policies.length === 0 ? (
+            <p className="prose-body max-w-prose text-sm text-ink-muted">
+              Belum ada kebijakan yang ditambahkan ke arsip ini.
+            </p>
+          ) : (
+            policies.map((policy) => (
+              <PolicyCard key={policy.slug} policy={policy} variant="compact" />
+            ))
+          )}
         </div>
       </section>
     </Container>

@@ -32,7 +32,7 @@ export const metadata = buildMetadata({
 const LAST_UPDATED = "2026-08-01";
 
 export default function AboutPage() {
-  const { sources } = getContent();
+  const { sources, figure } = getContent();
 
   return (
     <Container>
@@ -104,8 +104,8 @@ export default function AboutPage() {
           </h2>
           <p className="mt-3">
             Situs ini merupakan arsip biografis tidak resmi yang disusun
-            untuk tujuan edukasi dan portofolio. Tidak berafiliasi dengan
-            Joko Widodo, keluarganya, partai politik, atau institusi
+            untuk tujuan edukasi dan portofolio. Tidak berafiliasi dengan{" "}
+            {figure.name}, keluarganya, partai politik, atau institusi
             pemerintah manapun. Seluruh materi bersumber dari dokumen
             publik yang dirujuk pada bagian Sumber di bawah.
           </p>

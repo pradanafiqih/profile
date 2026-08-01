@@ -1,25 +1,28 @@
 import Link from "next/link";
 
+import { getContent } from "@/lib/content";
+
 /*
  * SiteFooter (R6.4, R7.3).
  *
  * Disclaimer ketidakberafiliasian Wajib tampil utuh di setiap
- * halaman (content-integrity.md). Teks disimpan konstan di sini
- * karena merupakan disclaimer kebijakan, bukan string tokoh-spesifik
- * (R10.2): apabila tokoh berganti, disclaimer tidak perlu diubah
- * sepanjang domain sub-situs tetap tidak resmi.
+ * halaman (content-integrity.md). Nama tokoh dibaca dari
+ * `content/figure.ts` (bukan hardcode) agar portabel: mengganti
+ * tokoh = mengganti isi content/ saja, tanpa sentuh komponen
+ * (R10.1, R10.2).
  *
  * Server Component murni.
  */
 
 export function SiteFooter() {
+  const { figure } = getContent();
   return (
     <footer className="border-t border-rule bg-paper-alt">
       <div className="mx-auto w-full max-w-content px-6 py-section-mobile md:py-12">
         <p className="prose-body text-sm text-ink-muted">
           Situs ini merupakan arsip biografis tidak resmi yang disusun
-          untuk tujuan edukasi dan portofolio. Tidak berafiliasi dengan
-          Joko Widodo, keluarganya, partai politik, atau institusi
+          untuk tujuan edukasi dan portofolio. Tidak berafiliasi dengan{" "}
+          {figure.name}, keluarganya, partai politik, atau institusi
           pemerintah manapun. Seluruh materi bersumber dari dokumen
           publik yang dirujuk pada halaman Sumber.
         </p>

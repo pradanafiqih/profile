@@ -21,7 +21,7 @@ import { RoleLabels } from "@/content/schema";
 export const metadata = buildMetadata({
   title: "Linimasa",
   description:
-    "Urutan kronologis peristiwa karier Joko Widodo, dikelompokkan per periode jabatan.",
+    "Urutan kronologis peristiwa karier, dikelompokkan per periode jabatan.",
   path: "/timeline",
 });
 
