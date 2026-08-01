@@ -66,7 +66,7 @@
 
 ## Phase 7 — Galeri (R5)
 
-- [ ] **7.1 Halaman galeri** — `app/gallery/page.tsx` dengan grid, kredit + lisensi persistent (bukan hover-only), `next/image` width/height eksplisit, klik buka `sourceUrl` di tab baru. — memenuhi R5.1–R5.6.
+- [x] **7.1 Halaman galeri** — `app/gallery/page.tsx` dengan grid, kredit + lisensi persistent (bukan hover-only), `next/image` width/height eksplisit, klik buka `sourceUrl` di tab baru. — memenuhi R5.1–R5.6.
 
 ## Phase 8 — About & Sumber (R6)
 
