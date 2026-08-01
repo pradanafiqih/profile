@@ -8,10 +8,9 @@ import type { MediaItem } from "./schema";
  * oleh lembaga pemerintah. Metadata (kredit, dimensi, tanggal)
  * diverifikasi langsung dari halaman Commons pada 2026-08-01.
  *
- * `src` adalah path lokal (R5.6 — tidak hotlink). Berkas gambar
- * aktual di `public/images/` belum diunduh; TODO_FACT: unduh dari
- * sourceUrl sebelum rilis final agar galeri tidak menampilkan
- * gambar rusak.
+ * `src` adalah path lokal (R5.6 — tidak hotlink). Berkas telah
+ * diunduh ke `public/images/`; potret 2019 memakai versi 1200px
+ * (bukan asli 10 MB) agar repo ringan.
  */
 export const media: MediaItem[] = [
   {
