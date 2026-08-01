@@ -56,7 +56,7 @@
 
 - [ ] **5.1 TimelineEntry lengkap** — extend `components/content/timeline-entry.tsx` dengan tanggal/rentang, judul, deskripsi ≤ 80 kata, daftar sumber. — memenuhi R3.2, R3.3.
 - [x] **5.2 SourceList** — `components/content/source-list.tsx` untuk daftar `Source` dengan tautan eksternal `target="_blank" rel="noopener"`. — memenuhi R3.2.
-- [ ] **5.3 Halaman linimasa** — `app/timeline/page.tsx`, semantik `<ol>` (bukan `<div>`), grup per periode jabatan. — memenuhi R3.1, R3.4, R3.5.
+- [x] **5.3 Halaman linimasa** — `app/timeline/page.tsx`, semantik `<ol>` (bukan `<div>`), grup per periode jabatan. — memenuhi R3.1, R3.4, R3.5.
 
 ## Phase 6 — Kebijakan (R4)
 
