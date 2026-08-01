@@ -22,4 +22,5 @@ export const figure: Figure = {
   },
   summary:
     "Presiden Republik Indonesia ke-7, menjabat 2014–2024. Sebelum menjadi presiden, ia bekerja sebagai pengusaha mebel, lalu menjabat Wali Kota Surakarta dan Gubernur DKI Jakarta. Kariernya dari kepala daerah menjadi kepala negara berlangsung dalam waktu sekitar satu dekade.",
+  portraitId: "media-portrait-2019",
 };

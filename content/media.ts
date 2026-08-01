@@ -35,8 +35,8 @@ export const media: MediaItem[] = [
     license: "Public Domain (Pasal 43 UU 28/2014)",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:Joko_Widodo_2019_official_portrait.jpg",
-    width: 4364,
-    height: 5246,
+    width: 1200,
+    height: 1443,
     category: "portrait",
     caption: "Potret resmi presiden, 2019.",
   },
