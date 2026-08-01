@@ -82,9 +82,9 @@
 
 ## Phase 10 — Audit & portabilitas (R10)
 
-- [ ] **10.1 Audit portabilitas** — grep `app/`, `components/`, `lib/` untuk string literal spesifik tokoh; pastikan hanya `content/` yang mengandung nama tokoh. — memenuhi R10.1, R10.2.
-- [ ] **10.2 Empty-state handling** — pastikan halaman galeri, linimasa, kebijakan menyembunyikan seksi aman saat array kosong. — memenuhi R10.3.
-- [ ] **10.3 Lighthouse audit** — jalankan build produksi lokal, verifikasi bundle `< 100 KB`, Lighthouse target ≥ 95. Catat hasil di laporan task. — memenuhi R8.1, R8.2.
+- [x] **10.1 Audit portabilitas** — grep `app/`, `components/`, `lib/` untuk string literal spesifik tokoh; pastikan hanya `content/` yang mengandung nama tokoh. — memenuhi R10.1, R10.2.
+- [x] **10.2 Empty-state handling** — pastikan halaman galeri, linimasa, kebijakan menyembunyikan seksi aman saat array kosong. — memenuhi R10.3.
+- [x] **10.3 Lighthouse audit** — jalankan build produksi lokal, verifikasi bundle `< 100 KB`, Lighthouse target ≥ 95. Catat hasil di laporan task. — memenuhi R8.1, R8.2.
 
 ---
 
