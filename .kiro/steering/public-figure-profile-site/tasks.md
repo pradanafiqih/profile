@@ -23,7 +23,7 @@
 - [x] **1.1 Bootstrap proyek Next.js** — `package.json`, `tsconfig.json`, `next.config.ts`, `tailwind.config.ts`, `postcss.config.mjs`, `eslint.config.mjs`, `app/layout.tsx` (root shell + skip-link + 2 font self-host), `app/page.tsx` (placeholder), `app/globals.css` (Tailwind directives + token CSS variables) — memenuhi R7.1 (font), R7.4 (skip-link), R9.1 (token warna), R9.5 (2 font), fondasi untuk semua phase berikutnya. Verifikasi: `pnpm lint && pnpm typecheck && pnpm build` lulus.
 - [x] **1.2 Token warna & skala font ke Tailwind** — extend `tailwind.config.ts` dengan warna `--ink`, `--ink-muted`, `--paper`, `--paper-alt`, `--rule`, `--accent` dan skala font 14/16/18/24/32/48/64. Buat helper class `prose-body` (max-w 68ch, leading 1.6) di `globals.css`. — memenuhi R9.1, R9.2, R9.4.
 - [x] **1.3 Skema Zod fondasi** — `content/schema.ts` berisi `SourceSchema`, `MediaItemSchema`, `FigureSchema`, `TimelineEntrySchema`, `PolicySchema`, `QuoteSchema`, plus `RoleSchema` (enum). Semua entri fakta mewajibkan `sourceIds: string[]` non-empty. — memenuhi R1.2, R1.3, R1.4, R1.5, fondasi R1.6.
-- [ ] **1.4 Loader + validator build-time** — `lib/content.ts`导出 fungsi `loadContent()` yang baca semua file `content/*.ts`, jalankan `safeParse`, gagal build dengan pesan menyebut nama file + entri jika invalid. Wire ke `app/layout.tsx` agar kepanggil setiap build. — memenuhi R1.2, R1.3, R1.4, R1.5.
+- [x] **1.4 Loader + validator build-time** — `lib/content.ts`导出 fungsi `loadContent()` yang baca semua file `content/*.ts`, jalankan `safeParse`, gagal build dengan pesan menyebut nama file + entri jika invalid. Wire ke `app/layout.tsx` agar kepanggil setiap build. — memenuhi R1.2, R1.3, R1.4, R1.5.
 
 ## Phase 2 — Data tokoh (Joko Widodo)
 
