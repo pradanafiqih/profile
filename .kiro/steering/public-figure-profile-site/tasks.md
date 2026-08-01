@@ -43,7 +43,7 @@
 - [x] **3.3 SiteFooter** — `components/layout/site-footer.tsx` dengan disclaimer ketidakberafiliasian lengkap. — memenuhi R6.4, R7.3.
 - [x] **3.4 Root layout finalisasi** — `app/layout.tsx` mount SiteHeader + SiteFooter, set metadata default, font self-host aktif. — memenuhi R7.1, R7.3.
 - [x] **3.5 404 custom** — `app/not-found.tsx` dengan tautan balik ke beranda + indeks kebijakan. — memenuhi R4.4.
-- [ ] **3.6 SEO helper** — `lib/seo.ts` dengan builder `buildMetadata()` per halaman. — memenuhi R8.5.
+- [x] **3.6 SEO helper** — `lib/seo.ts` dengan builder `buildMetadata()` per halaman. — memenuhi R8.5.
 
 ## Phase 4 — Homepage (R2)
 
