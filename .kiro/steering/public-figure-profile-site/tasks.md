@@ -32,7 +32,7 @@
 - [x] **2.1 Identitas tokoh** — `content/figure.ts` berisi `Figure` (nama, jabatan, rentang tahun, ringkasan ≤ 60 kata). Pakai placeholder eksplisit untuk angka ringkasan yang belum diverifikasi. — memenuhi R1.6, R2.1.
 - [x] **2.2 Registry sumber** — `content/sources.ts` berisi 5–8 `Source` nyata (Kompas, Tempo, BBC, Wikipedia penunjuk, dll) lengkap dengan `id`, `title`, `publisher`, `date`, `url`. — memenuhi R6.2, prasyarat R1.4.
 - [x] **2.3 Timeline seed** — `content/timeline.ts` berisi ≥ 12 `TimelineEntry` dikelompokkan 4 periode (Wali Kota Surakarta, Gubernur DKI, Presiden I, Presiden II). Pakai `TODO_FACT` untuk tanggal/entri yang belum diverifikasi. — memenuhi R3.1, R3.3, R3.4, R3.6.
-- [ ] **2.4 Policies seed** — `content/policies.ts` berisi ≥ 4 `Policy` (Kartu Indonesia Sehat, MP3I, IKN, dst) dengan slug stabil. — memenuhi R4.1, R4.5.
+- [x] **2.4 Policies seed** — `content/policies.ts` berisi ≥ 4 `Policy` (Kartu Indonesia Sehat, MP3I, IKN, dst) dengan slug stabil. — memenuhi R4.1, R4.5.
 - [ ] **2.5 Media seed** — `content/media.ts` berisi ≥ 6 `MediaItem` dengan `credit`, `license`, `sourceUrl` lengkap. Placeholder untuk gambar lokal di `public/images/`. — memenuhi R5.
 - [ ] **2.6 Quotes seed (opsional)** — `content/quotes.ts` dengan ≥ 3 kutipan bersumber. — memenuhi R6.
 
