@@ -74,7 +74,7 @@
 
 ## Phase 9 — SEO, metadata, deployment (R8, R11)
 
-- [ ] **9.1 Sitemap & robots** — `app/sitemap.ts`, `app/robots.ts`. — memenuhi R8.6.
+- [x] **9.1 Sitemap & robots** — `app/sitemap.ts`, `app/robots.ts`. — memenuhi R8.6.
 - [ ] **9.2 JSON-LD Person** — di `app/page.tsx`, structured data `Person` sesuai figure.ts. — memenuhi R8.7.
 - [ ] **9.3 Metadata per halaman** — pasang `metadata`/`generateMetadata` di tiap route dengan judul & OG unik. — memenuhi R8.5.
 - [ ] **9.4 prefers-reduced-motion** — global CSS menonaktifkan transisi non-esensial saat `prefers-reduced-motion: reduce`. — memenuhi R8.4.
