@@ -7,9 +7,7 @@ const nextConfig: NextConfig = {
     // Hanya muat aset lokal. Tidak ada domain eksternal (R5.6).
     remotePatterns: [],
   },
-  experimental: {
-    typedRoutes: false,
-  },
+  // typedRoutes: false → default; tidak perlu di-set.
 };
 
 export default nextConfig;
