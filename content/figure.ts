@@ -14,9 +14,10 @@ export const figure: Figure = {
   slug: "joko-widodo",
   name: "Joko Widodo",
   role: "Presiden Republik Indonesia ke-7",
+  // Terverifikasi: pelantikan 20 Oktober 2014 (periode I) dan
+  // 20 Oktober 2024 (periode II berakhir, Prabowo dilantik) — infobox
+  // artikel Joko Widodo: "Masa jabatan 20 Oktober 2014 – 20 Oktober 2024".
   term: {
-    // TODO_FACT: verifikasi tanggal pelantikan (2014-10-20 dan
-    //            2024-10-20) ke sumber primer sebelum rilis final.
     start: "2014-10-20",
     end: "2024-10-20",
   },
