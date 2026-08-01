@@ -61,7 +61,7 @@
 ## Phase 6 — Kebijakan (R4)
 
 - [ ] **6.1 PolicyCard lengkap** — extend `components/content/policy-card.tsx`. — memenuhi R4.1.
-- [ ] **6.2 Indeks kebijakan** — `app/policies/page.tsx`. — memenuhi R4.1.
+- [x] **6.2 Indeks kebijakan** — `app/policies/page.tsx`. — memenuhi R4.1.
 - [ ] **6.3 Halaman detail kebijakan** — `app/policies/[slug]/page.tsx` dengan `generateStaticParams`, latar belakang, isi, tanggal kunci, daftar sumber lengkap, bagian "perdebatan publik" jika ada. — memenuhi R4.2, R4.3, R4.5, R4.6.
 
 ## Phase 7 — Galeri (R5)
