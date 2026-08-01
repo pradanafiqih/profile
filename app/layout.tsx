@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { getContent } from "@/lib/content";
+
+/*
+ * Panggil loader konten saat modul dimuat. Efeknya:
+ * - Setiap file content/*.ts divalidasi terhadap skema Zod.
+ * - Setiap sourceId di timeline/policies/quotes dicek silang
+ *   dengan sources.ts. Build gagal jika ada yang tidak terdaftar.
+ * - Komponen tidak memakai hasilnya; yang penting adalah
+ *   side-effect validasi.
+ *
+ * Letakkan di top-level (bukan di dalam komponen) agar Next.js
+ * menjadikannya bagian dari static rendering pipeline.
+ */
+getContent();
 
 /*
  * Dua keluarga font, self-hosted via next/font (R9.5).
