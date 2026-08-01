@@ -18,7 +18,7 @@ import type { Metadata } from "next";
  * Tidak ada string spesifik tokoh di sini — server mengikuti R10.2.
  */
 
-const SITE_URL =
+export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.vercel.app";
 
 export const SITE_NAME = "Arsip Biografis";
