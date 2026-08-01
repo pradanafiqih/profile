@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { getContent } from "@/lib/content";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, nextUrl } from "@/lib/seo";
 import { Container } from "@/components/layout/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { FigureImage } from "@/components/content/figure-image";
@@ -14,6 +14,9 @@ import { PolicyCard } from "@/components/content/policy-card";
  * Konten 100% dibaca dari `content/` lewat `getContent()`. Tidak ada
  * string spesifik tokoh yang hardcode (R10.2). Server Component,
  * dirender ke HTML statis saat build.
+ *
+ * R8.7: structured data `Person` (schema.org) di-inject sebagai
+ * JSON-LD agar mesin pencari memahami entitas tokoh.
  */
 
 export const metadata = buildMetadata({
@@ -23,9 +26,8 @@ export const metadata = buildMetadata({
   path: "/",
 });
 
-// 3 pratinjau linimasa terpenting: pelantikan presiden + 2 peristiwa awal/akhir masa jabatan.
 const TIMELINE_PREVIEW_IDS = [
-  "tl-pelantik-2014", // placeholder, lihat fallback di bawah
+  "tl-pelantik-2014",
   "tl-terpilih-kembali-walikota-2010",
   "tl-akhir-masa-jabatan-presiden-2024",
 ];
@@ -36,8 +38,6 @@ export default function HomePage() {
     ? media.find((m) => m.id === figure.portraitId)
     : undefined;
 
-  // Fallback: kalau id hardcode tidak cocok dengan data, ambil 3 entri
-  // paling awal dan paling akhir sebagai pratinjau default.
   const fallbackIds = [
     timeline[0]?.id,
     timeline[Math.floor(timeline.length / 2)]?.id,
@@ -58,8 +58,36 @@ export default function HomePage() {
 
   const policyPreview = policies.slice(0, 3);
 
+  // JSON-LD Person (R8.7). Bidang yang dipakai:
+  // - @id: URL kanonik beranda
+  // - name, jobTitle, description
+  // - startDate / endDate (hanya jika periodenya jelas)
+  // - image: potret utama jika tersedia
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": nextUrl("/#person"),
+    name: figure.name,
+    jobTitle: {
+      "@type": "DefinedTerm",
+      name: figure.role,
+    },
+    description: figure.summary,
+    startDate: figure.term.start,
+    endDate: figure.term.end ?? undefined,
+    image: portrait ? nextUrl(portrait.src) : undefined,
+    url: nextUrl("/"),
+  };
+
   return (
     <Container>
+      <script
+        type="application/ld+json"
+        // dangerouslySetInnerHTML aman karena konten sepenuhnya
+        // dihasilkan dari data internal yang sudah divalidasi Zod.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+
       {/* Hero (R2.1, R2.2) */}
       <section
         aria-labelledby="hero-title"
