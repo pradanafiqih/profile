@@ -34,7 +34,7 @@
 - [x] **2.3 Timeline seed** — `content/timeline.ts` berisi ≥ 12 `TimelineEntry` dikelompokkan 4 periode (Wali Kota Surakarta, Gubernur DKI, Presiden I, Presiden II). Pakai `TODO_FACT` untuk tanggal/entri yang belum diverifikasi. — memenuhi R3.1, R3.3, R3.4, R3.6.
 - [x] **2.4 Policies seed** — `content/policies.ts` berisi ≥ 4 `Policy` (Kartu Indonesia Sehat, MP3I, IKN, dst) dengan slug stabil. — memenuhi R4.1, R4.5.
 - [x] **2.5 Media seed** — `content/media.ts` berisi ≥ 6 `MediaItem` dengan `credit`, `license`, `sourceUrl` lengkap. Placeholder untuk gambar lokal di `public/images/`. — memenuhi R5.
-- [ ] **2.6 Quotes seed (opsional)** — `content/quotes.ts` dengan ≥ 3 kutipan bersumber. — memenuhi R6.
+- [x] **2.6 Quotes seed (opsional)** — `content/quotes.ts` dengan ≥ 3 kutipan bersumber. — memenuhi R6.
 
 ## Phase 3 — Site shell & UI primitives
 
