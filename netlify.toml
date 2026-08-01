@@ -1,0 +1,14 @@
+# Konfigurasi build Netlify untuk Next.js 15 (App Router).
+# Plugin @netlify/plugin-nextjs wajib agar routing, next/image,
+# sitemap.xml, dan robots.txt berfungsi (bukan static export).
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+# Patok versi Node agar sesuai engines.node >= 20 di package.json.
+[build.environment]
+  NODE_VERSION = "22"
+
+# Plugin resmi Next.js untuk Netlify.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
