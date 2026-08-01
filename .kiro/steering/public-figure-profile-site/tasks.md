@@ -48,7 +48,7 @@
 ## Phase 4 — Homepage (R2)
 
 - [x] **4.1 FigureImage component** — `components/content/figure-image.tsx`, render `next/image` dengan `width`/`height` eksplisit, badge atribusi persistent (bukan hanya hover). — memenuhi R2.2, R5.2, R5.3, R5.4.
-- [ ] **4.2 TimelineEntry ringkas (card)** — `components/content/timeline-entry.tsx`, varian compact untuk homepage. — memenuhi R2.3.
+- [x] **4.2 TimelineEntry ringkas (card)** — `components/content/timeline-entry.tsx`, varian compact untuk homepage. — memenuhi R2.3.
 - [ ] **4.3 PolicyCard ringkas** — `components/content/policy-card.tsx`, varian compact untuk homepage. — memenuhi R2.4.
 - [ ] **4.4 Beranda assembly** — `app/page.tsx` menggabungkan hero (nama, jabatan, ringkasan, foto), 3 timeline preview, 3 policy preview. Server Component, tanpa JS klien untuk konten utama. — memenuhi R2.1–R2.6.
 
