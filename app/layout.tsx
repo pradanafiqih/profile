@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { getContent } from "@/lib/content";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
 
 /*
  * Panggil loader konten saat modul dimuat. Efeknya:
@@ -72,7 +74,13 @@ export default function RootLayout({
         >
           Lewati ke konten
         </a>
-        {children}
+        <div className="flex min-h-screen flex-col">
+          <SiteHeader />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );

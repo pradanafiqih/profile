@@ -1,4 +1,12 @@
+"use client";
+
+// Client Component karena `aria-current` butuh `usePathname()` dari
+// `next/navigation`. App Router tidak menyediakan pathname ke root
+// Server Component secara native; alternatifnya middleware + headers(),
+// tapi untuk satu nav tautan statis, `usePathname` lebih sederhana.
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 /*
  * SiteHeader (R7.1, R7.2, R7.5).
@@ -24,7 +32,8 @@ function isActive(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function SiteHeader({ pathname = "/" }: { pathname?: string }) {
+export function SiteHeader() {
+  const pathname = usePathname() ?? "/";
   return (
     <header className="border-b border-rule bg-paper">
       <div className="mx-auto flex w-full max-w-content items-center justify-between gap-6 px-6 py-4">
