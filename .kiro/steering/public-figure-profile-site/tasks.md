@@ -70,7 +70,7 @@
 
 ## Phase 8 — About & Sumber (R6)
 
-- [ ] **8.1 Halaman about** — `app/about/page.tsx` dengan tujuan situs, metode pengumpulan data, kriteria sumber, daftar lengkap `sources`, tanggal pembaruan terakhir, disclaimer. — memenuhi R6.1–R6.4.
+- [x] **8.1 Halaman about** — `app/about/page.tsx` dengan tujuan situs, metode pengumpulan data, kriteria sumber, daftar lengkap `sources`, tanggal pembaruan terakhir, disclaimer. — memenuhi R6.1–R6.4.
 
 ## Phase 9 — SEO, metadata, deployment (R8, R11)
 
