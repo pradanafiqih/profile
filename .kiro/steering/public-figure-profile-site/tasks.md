@@ -76,9 +76,9 @@
 
 - [x] **9.1 Sitemap & robots** — `app/sitemap.ts`, `app/robots.ts`. — memenuhi R8.6.
 - [ ] **9.2 JSON-LD Person** — di `app/page.tsx`, structured data `Person` sesuai figure.ts. — memenuhi R8.7.
-- [ ] **9.3 Metadata per halaman** — pasang `metadata`/`generateMetadata` di tiap route dengan judul & OG unik. — memenuhi R8.5.
-- [ ] **9.4 prefers-reduced-motion** — global CSS menonaktifkan transisi non-esensial saat `prefers-reduced-motion: reduce`. — memenuhi R8.4.
-- [ ] **9.5 README deployment** — `README.md` berisi instruksi Vercel import, env (kosong), catatan pnpm. — memenuhi R11.1, R11.4.
+- [x] **9.3 Metadata per halaman** — pasang `metadata`/`generateMetadata` di tiap route dengan judul & OG unik. — memenuhi R8.5.
+- [x] **9.4 prefers-reduced-motion** — global CSS menonaktifkan transisi non-esensial saat `prefers-reduced-motion: reduce`. — memenuhi R8.4.
+- [x] **9.5 README deployment** — `README.md` berisi instruksi Vercel import, env (kosong), catatan pnpm. — memenuhi R11.1, R11.4.
 
 ## Phase 10 — Audit & portabilitas (R10)
 
