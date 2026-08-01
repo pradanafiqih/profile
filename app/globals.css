@@ -40,6 +40,50 @@
 }
 
 /*
+ * R9.4: Lebar baris teks badan maksimal 68 karakter (68ch).
+ * Dipakai di paragraf deskriptif supaya irama baca konsisten.
+ * Line-height 1.6 sesuai panduan tipografi.
+ */
+@layer components {
+  .prose-body {
+    max-width: 68ch;
+    line-height: 1.6;
+  }
+
+  .prose-body p + p {
+    margin-top: 1em;
+  }
+
+  /*
+   * Pemisah seksi: garis tipis + spasi. Tanpa bayangan, tanpa card.
+   * Sesuai design-system: "Pemisahan pakai garis --rule".
+   */
+  .section-rule {
+    border-top: 1px solid var(--rule);
+    padding-top: var(--spacing-section, 96px);
+    margin-top: var(--spacing-section, 96px);
+  }
+
+  .section-rule-tight {
+    border-top: 1px solid var(--rule);
+    padding-top: 32px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 768px) {
+    .section-rule {
+      padding-top: 56px;
+      margin-top: 56px;
+    }
+
+    .section-rule-tight {
+      padding-top: 24px;
+      margin-top: 24px;
+    }
+  }
+}
+
+/*
  * R8.4: Hormati prefers-reduced-motion. Nonaktifkan transisi non-esensial.
  */
 @media (prefers-reduced-motion: reduce) {
